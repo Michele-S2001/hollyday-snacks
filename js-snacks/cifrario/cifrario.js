@@ -9,7 +9,13 @@ function isVowel(char) {
       return true;
     }
   }
-
+  /**
+   * vowels.forEach((vowel) => {
+   *  if (vowel === char) {
+   *    return true;
+   *  }
+   * });
+   */
   return false;
 
   /**
