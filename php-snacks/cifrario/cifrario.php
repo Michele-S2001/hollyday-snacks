@@ -10,17 +10,25 @@ function isVowel(String $char)
 function getStrIntoFarfallino(String $randomString)
 {
 
-  $arrString = str_split($randomString, 1);
+  //$arrString = str_split($randomString, 1);
   $farfString = '';
 
-  foreach ($arrString as $char) {
-
+  for ($i = 0; $i < strlen($randomString); $i++) {
+    $char = $randomString[$i];
     if (isVowel($char)) {
       $farfString .= $char . "f" . $char;
     } else {
       $farfString .= $char;
     }
   }
+  /*foreach ($arrString as $char) {
+
+    if (isVowel($char)) {
+      $farfString .= $char . "f" . $char;
+    } else {
+      $farfString .= $char;
+    }
+  }*/
 
   return $farfString;
 }

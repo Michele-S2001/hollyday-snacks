@@ -13,13 +13,21 @@ function generatePatternString(String $pattern, Int $repNumb)
 function getStrBetTwoIdx(String $infiniteString, Int $startLimit, Int $endLimit)
 {
   $peaceOfString = '';
-  $arrInfiniteString = str_split($infiniteString, 1);
+  //$arrInfiniteString = str_split($infiniteString, 1);
 
-  foreach ($arrInfiniteString as $key => $char) {
-    if ($key >= $startLimit && $key <= $endLimit) {
+  for ($i = 0; $i < strlen($infiniteString); $i++) {
+    $char = $infiniteString[$i];
+
+    if ($i >= $startLimit && $i <= $endLimit) {
       $peaceOfString .= $char;
     }
   }
+
+  /* ($arrInfiniteString as $key => $char) {
+    if ($key >= $startLimit && $key <= $endLimit) {
+      $peaceOfString .= $char;
+    }
+  }*/
 
   return $peaceOfString;
 }
