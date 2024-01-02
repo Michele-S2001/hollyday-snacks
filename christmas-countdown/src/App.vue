@@ -12,7 +12,8 @@ export default {
   data() {
     return {
       timeLeftData: {},
-      currentJoke: {}
+      currentJoke: {},
+      currentWeekday: ''
     }
   },
 
@@ -27,6 +28,7 @@ export default {
           this.timeLeftData = par.data;
         })
     },
+    
     fetchJoke() {
       axios
       .get('https://christmascountdown.live/api/joke', {
@@ -36,19 +38,35 @@ export default {
         }).then((par) => {
           this.currentJoke = par.data;
         })
+    },
+
+    fetchWeekday() {
+      axios
+      .get('https://christmascountdown.live/api/weekday', {
+          params: {
+            timezone: 'Europe/London'
+          }
+        }).then((par) => {
+          this.currentWeekday = par.data;
+        })
     }
   },
 
-  created() {
+  mounted() {
     this.fetchTimeLeft();
+    this.timer = setInterval(this.fetchTimeLeft, 1000);
+  },
+
+  created() {
     this.fetchJoke();
+    this.fetchWeekday();
   }
 }
 </script>
 
 <template>
   <AppHeader/>
-  <AppMain @generateJoke="fetchJoke" :timeLeft="timeLeftData" :joke="currentJoke"/>
+  <AppMain @generateJoke="fetchJoke" :timeLeft="timeLeftData" :joke="currentJoke" :weekday="currentWeekday"/>
 </template>
 
 <style lang="scss">
