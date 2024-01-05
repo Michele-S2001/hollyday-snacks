@@ -28,7 +28,7 @@ function flipIfOdd(num, str) {
 }
 
 const word = 'Ciao';
-console.log(flipIfOdd(26, word));
+//console.log(flipIfOdd(26, word));
 
 /**
  * Custom fn to flip strings

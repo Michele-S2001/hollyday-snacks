@@ -1,0 +1,3 @@
+# snack three
+
+- Per questo snack ho pensato ad una soluzione (forse la più scontata), ma non venendomene in mente altre, credo che la funzione ci debba restituire la prima lettera in comune nella stessa posizione all'interno delle due parole, per questo ho creato un ciclo, basato sulla lunghezza della parola più corta per non imbattermi in errori, e alla prima lettera in comune vado a sovrascrivere il valore di stringa vuota di una variabile precedentemente inizializzata con quello della lettera. Per poi farmi restituire o la lettera in comune o una stringa vuota
