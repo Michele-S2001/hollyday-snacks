@@ -19,4 +19,4 @@ const sum = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue / 2;
 }, 0)
 
-console.log(sum); 
+//console.log(sum); 

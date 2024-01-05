@@ -1,0 +1,3 @@
+# snack two 
+
+- In questo snack ho notato che se come argomento, oltre alla stringa casuale, veniva inserito un numero, che se pari non influiva sul valore restituito, ma se era dispari andava ad alterare la stringa ribaltandola, ho creato quindi una funzione apposta, nel caso in uso utilizzo i metodi degli array, ma sotto ho riportato una funzione custom molto intuitiva su come ottenere lo stesso risultato
