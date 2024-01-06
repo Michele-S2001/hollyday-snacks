@@ -40,4 +40,4 @@ const word2 = 'accetta';
 
 const firstCommChar = getFirstCommonChar(word1, word2);
 
-console.log(firstCommChar);
+// console.log(firstCommChar);
