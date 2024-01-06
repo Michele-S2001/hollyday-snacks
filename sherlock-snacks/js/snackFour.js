@@ -34,11 +34,11 @@ function getNormalWord(word) {
 
 const rdmWord = 'pppprrrrroooovvvvvaaaa';
 
-console.log('Con la funzione custom: ', getNormalWord(rdmWord));
+//console.log('Con la funzione custom: ', getNormalWord(rdmWord));
 
 /**
  * Opzione alternativa con le regex
  */
 
 const rdmWordConv = rdmWord.replace(/(.)\1+/g, '$1');
-console.log('Con le regex: ', rdmWordConv);
+//console.log('Con le regex: ', rdmWordConv);
